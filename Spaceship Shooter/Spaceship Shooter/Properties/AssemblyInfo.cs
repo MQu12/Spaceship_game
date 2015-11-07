@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Spaceship Shooter")]
-[assembly: AssemblyProduct("Spaceship Shooter")]
+[assembly: AssemblyTitle("Spaceship_shooter_missile")]
+[assembly: AssemblyProduct("Spaceship_shooter_missile")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("57d131a2-58f6-42ee-b4d1-a347688fd2b6")]
+[assembly: Guid("17962b54-afeb-4db0-808c-65d1360182d1")]
 
 // Version information for an assembly consists of the following four values:
 //

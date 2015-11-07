@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Spaceship_Shooter
+namespace Spaceship_shooter_missile
 {
 #if WINDOWS || LINUX
     /// <summary>

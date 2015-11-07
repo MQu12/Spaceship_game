@@ -59,3 +59,5 @@ C:\Users\Tom\Google Drive\KPV Games\Test_spaceship_game\Spaceship Shooter\Spaces
 C:\Users\Tom\Google Drive\KPV Games\Test_spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Tom\Google Drive\KPV Games\Test_spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.csprojResolveAssemblyReference.cache
 C:\Users\Tom\Google Drive\KPV Games\Test_spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\mouseSprite.xnb
+C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.exe
+C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.pdb

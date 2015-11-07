@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/rober_000/Google Drive/KPV Games/Test_spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/background.png</SourceFile>
+  <SourceFile>C:/Users/rober_000/Documents/background.png</SourceFile>
   <SourceTime>2015-11-05T22:54:30+00:00</SourceTime>
-  <DestFile>C:/Users/rober_000/Google Drive/KPV Games/Test_spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/bin/Windows/background.xnb</DestFile>
-  <DestTime>2015-11-06T20:15:24.6384891+00:00</DestTime>
+  <DestFile>c:/users/rober_000/documents/visual studio 2015/Projects/Spaceship_shooter_missile/Spaceship_shooter_missile/Content/bin/Windows/background.xnb</DestFile>
+  <DestTime>2015-11-07T14:07:51.2007+00:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2015-11-06T13:03:52+00:00</ImporterTime>
+  <ImporterTime>2015-04-29T18:14:44+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2015-11-06T13:03:52+00:00</ProcessorTime>
+  <ProcessorTime>2015-04-29T18:14:44+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

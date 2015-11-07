@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Spaceship_Shooter
+namespace Spaceship_shooter_missile
 {
     /// <summary>
     /// Class for the player's ship
@@ -27,7 +27,7 @@ namespace Spaceship_Shooter
             vel_x = 0;
             vel_y = 0;
         }
-        
+
         // member function to update the player's position
         public void Update(float playerMouse_angle)
         {

@@ -2,7 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Spaceship_Shooter
+
+namespace Spaceship_shooter_missile
 {
     /// <summary>
     /// This is the main type for your game.
@@ -12,15 +13,20 @@ namespace Spaceship_Shooter
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // create instance of PlayerShip class
+        // create instances of PlayerShip and Missile classes
         private PlayerShip player_ship;
+        private Missile missileSprite;
 
         // images
         private Texture2D background;
         private Texture2D mouseSprite;
+        
 
         // coordinates of mouse
         private float mouse_x, mouse_y;
+
+        // mouse state
+        MouseState previousMouseState;
 
         // angle from player to mouse
         private float playerMouse_angle;
@@ -40,6 +46,8 @@ namespace Spaceship_Shooter
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            //store the current state of the mouse
+            previousMouseState = Mouse.GetState();
 
             base.Initialize();
         }
@@ -56,9 +64,12 @@ namespace Spaceship_Shooter
             // TODO: use this.Content to load your game content here
             background = Content.Load<Texture2D>("background");
             mouseSprite = Content.Load<Texture2D>("mouseSprite");
-            
+
             // create and load the player's ship with initial position x=400, y=240
             player_ship = new PlayerShip(Content.Load<Texture2D>("player_ship"), 400, 240);
+
+            // create and load the missile with initial position x=400, y=240
+            missileSprite = new Missile(Content.Load<Texture2D>("missileSprite"), 400, 240);
 
         }
 
@@ -71,6 +82,7 @@ namespace Spaceship_Shooter
             // TODO: Unload any non ContentManager content here
         }
 
+        
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -86,16 +98,21 @@ namespace Spaceship_Shooter
 
             // get mouse coordinates and calculate angle between player and mouse
             MouseState mouse_state = Mouse.GetState();
+            //MouseState old_mouse_state;
             mouse_x = mouse_state.X;
             mouse_y = mouse_state.Y;
-            playerMouse_angle = (float)System.Math.Atan2((mouse_x - player_ship.player_x + (player_ship.playerShip_texture.Width / 2)) , -(mouse_y - player_ship.player_y + (player_ship.playerShip_texture.Height / 2))) - (float)System.Math.PI / 2;
+            playerMouse_angle = (float)System.Math.Atan2((mouse_x - player_ship.player_x + (player_ship.playerShip_texture.Width / 2)), -(mouse_y - player_ship.player_y + (player_ship.playerShip_texture.Height / 2))) - (float)System.Math.PI / 2;
 
-            // update player's position
+            // update player's and missile's positions
             player_ship.Update(playerMouse_angle);
+            missileSprite.Update(playerMouse_angle, player_ship);
+
+
 
             base.Update(gameTime);
         }
 
+        
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -105,11 +122,13 @@ namespace Spaceship_Shooter
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            
+
             // start drawing
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White); //draw background
+
+            missileSprite.Draw(spriteBatch, playerMouse_angle); //draw missile
 
             player_ship.Draw(spriteBatch, playerMouse_angle); //draw player
 
