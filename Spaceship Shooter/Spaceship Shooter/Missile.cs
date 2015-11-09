@@ -50,7 +50,7 @@ namespace Spaceship_shooter
             Vector2 missile_position = new Vector2(missile_x - (missile_texture.Width / 2), missile_y - (missile_texture.Height / 2));
             Rectangle missile_source_rectangle = new Rectangle(0, 0, missile_texture.Width, missile_texture.Height);
             Vector2 missile_rotation_origin = new Vector2(missile_texture.Width / 2, missile_texture.Height / 2);
-            spriteBatch.Draw(missile_texture, missile_position, missile_source_rectangle, Color.White, playerMouse_angle, missile_rotation_origin, 0.1f, SpriteEffects.None, 1);
+            spriteBatch.Draw(missile_texture, missile_position, missile_source_rectangle, Color.White, playerMouse_angle, missile_rotation_origin, 0.06f, SpriteEffects.None, 1);
             
         }
     }

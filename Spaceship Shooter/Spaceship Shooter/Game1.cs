@@ -146,12 +146,14 @@ namespace Spaceship_shooter
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White); //draw background
-            
+
+            if (havewegotamissile == true) missile.Draw(spriteBatch, missile_angle); //draw a missile if we've got one, but underneath the player ship
+
             player_ship.Draw(spriteBatch, playerMouse_angle); //draw player
 
             // draw mouse last so it is on top
             spriteBatch.Draw(mouseSprite, new Vector2(mouse_x, mouse_y), Color.White); // draw mouse (better way?)
-            if(havewegotamissile==true) missile.Draw(spriteBatch, missile_angle);   
+          
             spriteBatch.End();
             // end drawing
 
