@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Spaceship_shooter_missile
+namespace Spaceship_shooter
 {
     /// <summary>
     /// Class for the player's ship

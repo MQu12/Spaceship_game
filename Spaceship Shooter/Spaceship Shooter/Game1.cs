@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 
-namespace Spaceship_shooter_missile
+namespace Spaceship_shooter
 {
     /// <summary>
     /// This is the main type for your game.
@@ -15,7 +15,11 @@ namespace Spaceship_shooter_missile
 
         // create instances of PlayerShip and Missile classes
         private PlayerShip player_ship;
-        private Missile missileSprite;
+        private Missile missile;
+
+        //some variables relating to our WMD
+        private bool havewegotamissile = false;
+        private float missile_angle;
 
         // images
         private Texture2D background;
@@ -26,10 +30,11 @@ namespace Spaceship_shooter_missile
         private float mouse_x, mouse_y;
 
         // mouse state
-        MouseState previousMouseState;
+        MouseState previous_mouse_state;
 
         // angle from player to mouse
         private float playerMouse_angle;
+        
 
         public Game1()
         {
@@ -47,7 +52,7 @@ namespace Spaceship_shooter_missile
         {
             // TODO: Add your initialization logic here
             //store the current state of the mouse
-            previousMouseState = Mouse.GetState();
+            previous_mouse_state = Mouse.GetState();
 
             base.Initialize();
         }
@@ -69,7 +74,7 @@ namespace Spaceship_shooter_missile
             player_ship = new PlayerShip(Content.Load<Texture2D>("player_ship"), 400, 240);
 
             // create and load the missile with initial position x=400, y=240
-            missileSprite = new Missile(Content.Load<Texture2D>("missileSprite"), 400, 240);
+            
 
         }
 
@@ -103,9 +108,23 @@ namespace Spaceship_shooter_missile
             mouse_y = mouse_state.Y;
             playerMouse_angle = (float)System.Math.Atan2((mouse_x - player_ship.player_x + (player_ship.playerShip_texture.Width / 2)), -(mouse_y - player_ship.player_y + (player_ship.playerShip_texture.Height / 2))) - (float)System.Math.PI / 2;
 
+            //if left mouse button is pressed, construct a new missile
+
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed /*&& previous_mouse_state.LeftButton == ButtonState.Released*/)
+            {
+                missile = new Missile(Content.Load<Texture2D>("missileSprite"), player_ship, playerMouse_angle);
+                havewegotamissile = true;
+                missile_angle = playerMouse_angle;
+            }
+
+            if(havewegotamissile==true) missile.Update();
+
+            // save the current mouse state for the next frame
+            previous_mouse_state = Mouse.GetState();
+
             // update player's and missile's positions
             player_ship.Update(playerMouse_angle);
-            missileSprite.Update(playerMouse_angle, player_ship);
+            
 
 
 
@@ -127,14 +146,12 @@ namespace Spaceship_shooter_missile
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White); //draw background
-
-            missileSprite.Draw(spriteBatch, playerMouse_angle); //draw missile
-
+            
             player_ship.Draw(spriteBatch, playerMouse_angle); //draw player
 
             // draw mouse last so it is on top
             spriteBatch.Draw(mouseSprite, new Vector2(mouse_x, mouse_y), Color.White); // draw mouse (better way?)
-
+            if(havewegotamissile==true) missile.Draw(spriteBatch, missile_angle);   
             spriteBatch.End();
             // end drawing
 

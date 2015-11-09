@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/rober_000/Documents/background.png</File>
-    <File>C:/Users/rober_000/Documents/missileSprite.png</File>
-    <File>C:/Users/rober_000/Documents/mouseSprite.png</File>
-    <File>C:/Users/rober_000/Documents/player_ship.png</File>
+    <File>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/background.png</File>
+    <File>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/missileSprite.png</File>
+    <File>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/mouseSprite.png</File>
+    <File>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/player_ship.png</File>
   </SourceFiles>
 </SourceFileCollection>

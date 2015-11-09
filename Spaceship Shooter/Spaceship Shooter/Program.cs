@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Spaceship_shooter_missile
+namespace Spaceship_shooter
 {
 #if WINDOWS || LINUX
     /// <summary>

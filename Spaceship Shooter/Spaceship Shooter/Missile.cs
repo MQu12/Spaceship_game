@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Spaceship_shooter_missile
+namespace Spaceship_shooter
 {
 
     class Missile
@@ -16,35 +16,28 @@ namespace Spaceship_shooter_missile
         
 
         // constructor
-        public Missile(Texture2D texture, int x, int y)
+        public Missile(Texture2D texture, PlayerShip player_ship, float playerMouse_angle)
         {
             missile_texture = texture;
-            missile_x = x+80; // this is the player's position, centre of sprite
-            missile_y = y-2;
+            missile_x = player_ship.player_x+80; // this is the player's position, centre of sprite
+            missile_y = player_ship.player_y-2;
 
-            missile_vel_x = 0;
-            missile_vel_y = 0;
+            //missile has initial speed of magnitude 5, and fires in the mouse direction
+            missile_vel_x = missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
+            missile_vel_y = missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
         }
         
         // member function to update the player's position
-        public void Update(float playerMouse_angle, PlayerShip player_ship)
+        public void Update()
         {
 
             // if left mouse button is pressed, having been not pressed in last frame, shoot off missile
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed && previous_mouse_state.LeftButton == ButtonState.Released)
-            {
-                missile_vel_x = missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
-                missile_vel_y = missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
-            }
+           
 
-            // updates missile position based on velocity
-            // may be better to use some kind of game time?
-            missile_x += missile_vel_x + player_ship.vel_x;
-            missile_y += missile_vel_y + player_ship.vel_y;
-
-            //save the current mouse state for the next frame
-            // the current 
-            previous_mouse_state = Mouse.GetState();
+            // updates missile position based on velocity of the missile         
+            missile_x += missile_vel_x;
+            missile_y += missile_vel_y;
+                      
 
 
         }
