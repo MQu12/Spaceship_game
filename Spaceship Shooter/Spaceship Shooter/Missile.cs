@@ -23,8 +23,8 @@ namespace Spaceship_shooter
             missile_y = player_ship.player_y-2;
 
             //missile has initial speed of magnitude 5, and fires in the mouse direction
-            missile_vel_x = missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
-            missile_vel_y = missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
+            missile_vel_x = player_ship.vel_x + missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
+            missile_vel_y = player_ship.vel_y + missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
         }
         
         // member function to update the player's position
