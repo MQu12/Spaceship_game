@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 
 namespace Spaceship_shooter
@@ -110,14 +111,19 @@ namespace Spaceship_shooter
 
             //if left mouse button is pressed, construct a new missile
 
+            List<object> missile_list = new List<object>();
+
             if (Mouse.GetState().LeftButton == ButtonState.Pressed /*&& previous_mouse_state.LeftButton == ButtonState.Released*/)
             {
                 missile = new Missile(Content.Load<Texture2D>("missileSprite"), player_ship, playerMouse_angle);
+                missile_list.Add(missile);
                 havewegotamissile = true;
                 missile_angle = playerMouse_angle;
+                System.Console.WriteLine(missile_list);
+                System.Console.WriteLine(missile_list.Count);
             }
 
-            if(havewegotamissile==true) missile.Update();
+            if(havewegotamissile==true) missile.Update(); // THIS LINE REMOVES THE CURRENT MISSILE IF CLICK MOUSE
 
             // save the current mouse state for the next frame
             previous_mouse_state = Mouse.GetState();

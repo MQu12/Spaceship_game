@@ -91,3 +91,35 @@ C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debu
 C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.RawInput.xml
 C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.csprojResolveAssemblyReference.cache
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.exe
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.pdb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\desktop.ini
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\mouse.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\spriteFont.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\background.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\missileSprite.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\mouseSprite.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\player_ship.xnb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Spaceship Shooter.exe
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Spaceship Shooter.pdb
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\MonoGame.Framework.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.csprojResolveAssemblyReference.cache
