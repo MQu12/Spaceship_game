@@ -17,11 +17,7 @@ namespace Spaceship_shooter
         // create instances of PlayerShip and Missile classes
         private PlayerShip player_ship;
         private Missile missile;
-
-        //some variables relating to our WMD
-        private bool havewegotamissile = false;
-        private float missile_angle;
-
+             
         // images
         private Texture2D background;
         private Texture2D mouseSprite;
@@ -110,20 +106,26 @@ namespace Spaceship_shooter
             playerMouse_angle = (float)System.Math.Atan2((mouse_x - player_ship.player_x + (player_ship.playerShip_texture.Width / 2)), -(mouse_y - player_ship.player_y + (player_ship.playerShip_texture.Height / 2))) - (float)System.Math.PI / 2;
 
             //if left mouse button is pressed, construct a new missile
+                      
 
-            List<object> missile_list = new List<object>();
-
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed /*&& previous_mouse_state.LeftButton == ButtonState.Released*/)
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed && previous_mouse_state.LeftButton == ButtonState.Released)
             {
                 missile = new Missile(Content.Load<Texture2D>("missileSprite"), player_ship, playerMouse_angle);
-                missile_list.Add(missile);
-                havewegotamissile = true;
-                missile_angle = playerMouse_angle;
+                player_ship.missile_list.Add(missile); //stored in the object player_ship, that  way each ship stores info about its missiles.
+                               
+                /*
                 System.Console.WriteLine(missile_list);
                 System.Console.WriteLine(missile_list.Count);
+                There is no console; can't really see a use for this
+                */
             }
 
-            if(havewegotamissile==true) missile.Update(); // THIS LINE REMOVES THE CURRENT MISSILE IF CLICK MOUSE
+            for (int i = 0; i < player_ship.missile_list.Count; i++)
+            {
+
+                player_ship.missile_list[i].Update();
+
+            }
 
             // save the current mouse state for the next frame
             previous_mouse_state = Mouse.GetState();
@@ -137,7 +139,7 @@ namespace Spaceship_shooter
             base.Update(gameTime);
         }
 
-        
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -153,8 +155,10 @@ namespace Spaceship_shooter
 
             spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White); //draw background
 
-            if (havewegotamissile == true) missile.Draw(spriteBatch, missile_angle); //draw a missile if we've got one, but underneath the player ship
-
+            for (int i = 0; i < player_ship.missile_list.Count; i++)
+            {
+                player_ship.missile_list[i].Draw(spriteBatch, player_ship.missile_list[i].missile_angle); //draw a missile if we've got one, but underneath the player ship
+            }
             player_ship.Draw(spriteBatch, playerMouse_angle); //draw player
 
             // draw mouse last so it is on top

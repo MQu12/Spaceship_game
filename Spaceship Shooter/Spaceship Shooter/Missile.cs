@@ -12,7 +12,8 @@ namespace Spaceship_shooter
         public float missile_x, missile_y;  // missile x and y positions
         public float missile_vel_x, missile_vel_y;
         public float missile_mag_vel = 5;
-        public MouseState previous_mouse_state;
+        public float missile_angle;
+        //public MouseState previous_mouse_state
         
 
         // constructor
@@ -25,6 +26,7 @@ namespace Spaceship_shooter
             //missile has initial speed of magnitude 5, and fires in the mouse direction
             missile_vel_x = player_ship.vel_x + missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
             missile_vel_y = player_ship.vel_y + missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
+            missile_angle = playerMouse_angle;
         }
         
         // member function to update the player's position

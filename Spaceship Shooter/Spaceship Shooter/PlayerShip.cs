@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Spaceship_shooter
 {
@@ -14,6 +15,8 @@ namespace Spaceship_shooter
         public float player_x, player_y; // holds the players's x and y positions
         public float vel_x, vel_y; // holds the player's x and y velocities
         public float thrust = 0.05f; // holds the thrust of the player's ship
+        public List<Missile> missile_list= new List<Missile>();
+
 
         // constructor for PlayerShip class
         // takes a 2D texture sprite, and the initial x and y positions as arguments
