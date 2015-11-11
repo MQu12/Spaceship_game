@@ -16,6 +16,7 @@ namespace Spaceship_shooter
         public float vel_x, vel_y; // holds the player's x and y velocities
         public float thrust = 0.05f; // holds the thrust of the player's ship
         public List<Missile> missile_list= new List<Missile>();
+        public int missile_bounce_limit = 1;
 
 
         // constructor for PlayerShip class

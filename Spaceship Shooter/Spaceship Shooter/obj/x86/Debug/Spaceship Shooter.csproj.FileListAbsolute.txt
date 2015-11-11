@@ -123,3 +123,4 @@ C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter
 C:\Users\rober_000\Documents\Coding\C# projects\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.csprojResolveAssemblyReference.cache
 C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\player_ship2.xnb
 C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\bin\Windows\Debug\Content\background.xnb
+C:\Users\Tom\Spaceship_game\Spaceship Shooter\Spaceship Shooter\obj\x86\Debug\Spaceship Shooter.csprojResolveAssemblyReference.cache

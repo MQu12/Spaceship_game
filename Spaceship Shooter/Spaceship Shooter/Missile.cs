@@ -12,9 +12,10 @@ namespace Spaceship_shooter
         public float missile_x, missile_y;  // missile x and y positions
         public float missile_vel_x, missile_vel_y;
         public float missile_mag_vel = 5;
-        public float missile_angle;       
+        public float missile_angle;
+        public int bounces_remaining;
         
-
+        
         // constructor
         public Missile(Texture2D texture, PlayerShip player_ship, float playerMouse_angle)
         {
@@ -26,20 +27,38 @@ namespace Spaceship_shooter
             missile_vel_x = player_ship.vel_x + missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
             missile_vel_y = player_ship.vel_y + missile_mag_vel * (float)System.Math.Sin(playerMouse_angle);
             missile_angle = playerMouse_angle;
-        }
+
+            //set the remaining bounces
+            bounces_remaining = player_ship.missile_bounce_limit;
+        }                
         
         // member function to update the player's position
         public void Update()
         {
-
-            // if left mouse button is pressed, having been not pressed in last frame, shoot off missile
-           
 
             // updates missile position based on velocity of the missile         
             missile_x += missile_vel_x;
             missile_y += missile_vel_y;
                       
 
+
+        }
+
+        public void bounce()
+        {
+            //bounce the missile!
+
+            if (missile_x < 10 || missile_x > 1000)
+            {
+                missile_vel_x = -missile_vel_x;
+                bounces_remaining--;
+            }
+
+            if (missile_y < 10 || missile_y > 500)
+            {
+                missile_vel_y = -missile_vel_y;
+                bounces_remaining--;
+            }
 
         }
 

@@ -125,6 +125,13 @@ namespace Spaceship_shooter
 
                 player_ship.missile_list[i].Update();
 
+                //if the missile is off the screen, remove it
+                if(player_ship.missile_list[i].missile_x>1100|| player_ship.missile_list[i].missile_x < 0|| player_ship.missile_list[i].missile_y > 600|| player_ship.missile_list[i].missile_y < 0)
+                {
+                    if (player_ship.missile_list[i].bounces_remaining > 0) player_ship.missile_list[i].bounce(); //bounce the missile
+
+                    else player_ship.missile_list.RemoveAt(i); //if no bounces left, remove it
+                }
             }
 
             // save the current mouse state for the next frame
