@@ -94,6 +94,7 @@
     <None Include="Content\mouse.xnb" />
     <None Include="Content\mouseSprite.xnb" />
     <None Include="Content\player_ship.xnb" />
+    <None Include="Content\player_ship2.xnb" />
     <None Include="Content\spriteFont.xnb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

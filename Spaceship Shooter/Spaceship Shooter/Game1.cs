@@ -68,7 +68,7 @@ namespace Spaceship_shooter
             mouseSprite = Content.Load<Texture2D>("mouseSprite");
 
             // create and load the player's ship with initial position x=400, y=240
-            player_ship = new PlayerShip(Content.Load<Texture2D>("player_ship"), 400, 240);
+            player_ship = new PlayerShip(Content.Load<Texture2D>("player_ship2"), 400, 240);
 
             // create and load the missile with initial position x=400, y=240
             

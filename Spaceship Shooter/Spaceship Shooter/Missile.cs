@@ -12,8 +12,7 @@ namespace Spaceship_shooter
         public float missile_x, missile_y;  // missile x and y positions
         public float missile_vel_x, missile_vel_y;
         public float missile_mag_vel = 5;
-        public float missile_angle;
-        //public MouseState previous_mouse_state
+        public float missile_angle;       
         
 
         // constructor

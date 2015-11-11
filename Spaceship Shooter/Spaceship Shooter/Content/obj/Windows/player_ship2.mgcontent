@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/background.png</SourceFile>
-  <SourceTime>2015-11-05T22:54:30+00:00</SourceTime>
-  <DestFile>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/bin/Windows/background.xnb</DestFile>
-  <DestTime>2015-11-11T17:20:30.2722969+00:00</DestTime>
+  <SourceFile>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/player_ship2.png</SourceFile>
+  <SourceTime>2015-11-11T16:53:14.7367496+00:00</SourceTime>
+  <DestFile>C:/Users/Tom/Spaceship_game/Spaceship Shooter/Spaceship Shooter/Content/bin/Windows/player_ship2.xnb</DestFile>
+  <DestTime>2015-11-11T17:19:51.1970619+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-04-29T18:14:44+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
