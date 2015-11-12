@@ -14,9 +14,10 @@ namespace Spaceship_shooter
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // create instances of PlayerShip and Missile classes
+        // create instances of PlayerShip, Missile and Asteroid classes
         private PlayerShip player_ship;
         private Missile missile;
+        private Asteroid asteroid;
              
         // images
         private Texture2D background;
@@ -31,6 +32,11 @@ namespace Spaceship_shooter
 
         // angle from player to mouse
         private float playerMouse_angle;
+
+        // if start of game (needed for asteroid initialisation)
+        private bool start = true;
+
+        private int asteroid_number = 3;
         
 
         public Game1()
@@ -70,10 +76,11 @@ namespace Spaceship_shooter
             // create and load the player's ship with initial position x=400, y=240
             player_ship = new PlayerShip(Content.Load<Texture2D>("player_ship2"), 400, 240);
 
-            // create and load the missile with initial position x=400, y=240
-            
+            // create and load our asteroid[s]
+            //asteroid = new Asteroid(Content.Load<Texture2D>("asteroid_sprite1"));
 
         }
+
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -82,6 +89,7 @@ namespace Spaceship_shooter
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+
         }
 
         
@@ -97,6 +105,22 @@ namespace Spaceship_shooter
                 Exit();
 
             // TODO: Add your update logic here
+
+            if (start == true)
+            {
+                for (int i = 0; i < asteroid_number; i++)
+                {
+                    asteroid = new Asteroid(Content.Load<Texture2D>("asteroid_sprite1"));
+                    System.Console.Write(asteroid.asteroid_x);
+                    System.Console.Write("\n");
+                    player_ship.asteroid_list.Add(asteroid);
+                }
+                start = false;
+                System.Console.Write("Asteroid Count: ");
+                System.Console.Write(player_ship.asteroid_list.Count);
+                System.Console.Write("\n");
+            }
+
 
             // get mouse coordinates and calculate angle between player and mouse
             MouseState mouse_state = Mouse.GetState();
@@ -137,9 +161,15 @@ namespace Spaceship_shooter
             // save the current mouse state for the next frame
             previous_mouse_state = Mouse.GetState();
 
-            // update player's and missile's positions
+            // update player's position
             player_ship.Update(playerMouse_angle);
-            
+
+            // update asteroid's position
+            for (int i = 0; i < player_ship.asteroid_list.Count; i++)
+            {
+                player_ship.asteroid_list[i].Update();
+            }
+
 
 
 
@@ -160,13 +190,25 @@ namespace Spaceship_shooter
             // start drawing
             spriteBatch.Begin();
 
-            spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White); //draw background
+            // draw background
+            spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White);
 
+            // draw missiles
             for (int i = 0; i < player_ship.missile_list.Count; i++)
             {
                 player_ship.missile_list[i].Draw(spriteBatch, player_ship.missile_list[i].missile_angle); //draw a missile if we've got one, but underneath the player ship
             }
-            player_ship.Draw(spriteBatch, playerMouse_angle); //draw player
+
+            // draw player ship
+            player_ship.Draw(spriteBatch, playerMouse_angle);
+
+            // draw asteroids
+            for (int i = 0; i < player_ship.asteroid_list.Count; i++)
+            {
+                player_ship.asteroid_list[i].Draw(spriteBatch);
+            }
+
+
 
             // draw mouse last so it is on top
             spriteBatch.Draw(mouseSprite, new Vector2(mouse_x, mouse_y), Color.White); // draw mouse (better way?)

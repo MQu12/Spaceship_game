@@ -20,8 +20,8 @@ namespace Spaceship_shooter
         public Missile(Texture2D texture, PlayerShip player_ship, float playerMouse_angle)
         {
             missile_texture = texture;
-            missile_x = player_ship.player_x+80; // this is the player's position, centre of sprite
-            missile_y = player_ship.player_y-2;
+            missile_x = player_ship.player_x + 15; // this is the player's position, centre of sprite
+            missile_y = player_ship.player_y - 91;
 
             //missile has initial speed of magnitude 5, and fires in the mouse direction
             missile_vel_x = player_ship.vel_x + missile_mag_vel * (float)System.Math.Cos(playerMouse_angle);
