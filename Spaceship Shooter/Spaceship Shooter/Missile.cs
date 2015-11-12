@@ -48,15 +48,17 @@ namespace Spaceship_shooter
         {
             //bounce the missile!
 
-            if (missile_x < 10 || missile_x > 1000)
+            if (missile_x < 30 || missile_x > 900)
             {
                 missile_vel_x = -missile_vel_x;
+                missile_angle = -missile_angle + (float)System.Math.PI;
                 bounces_remaining--;
             }
 
             if (missile_y < 10 || missile_y > 500)
             {
                 missile_vel_y = -missile_vel_y;
+                missile_angle = -missile_angle;
                 bounces_remaining--;
             }
 
@@ -64,13 +66,13 @@ namespace Spaceship_shooter
 
         // member function to draw the missile
         // takes a SpriteBatch and angle between the player and the mouse as arguments
-        public void Draw(SpriteBatch spriteBatch, float playerMouse_angle)
+        public void Draw(SpriteBatch spriteBatch, float missile_angle)
         {
 
             Vector2 missile_position = new Vector2(missile_x - (missile_texture.Width / 2), missile_y - (missile_texture.Height / 2));
             Rectangle missile_source_rectangle = new Rectangle(0, 0, missile_texture.Width, missile_texture.Height);
             Vector2 missile_rotation_origin = new Vector2(missile_texture.Width / 2, missile_texture.Height / 2);
-            spriteBatch.Draw(missile_texture, missile_position, missile_source_rectangle, Color.White, playerMouse_angle, missile_rotation_origin, 0.06f, SpriteEffects.None, 1);
+            spriteBatch.Draw(missile_texture, missile_position, missile_source_rectangle, Color.White, missile_angle, missile_rotation_origin, 0.06f, SpriteEffects.None, 1);
             
         }
     }

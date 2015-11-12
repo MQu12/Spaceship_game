@@ -106,19 +106,21 @@ namespace Spaceship_shooter
 
             // TODO: Add your update logic here
 
+            
+            // if at start of game, append our asteroids to list
             if (start == true)
             {
                 for (int i = 0; i < asteroid_number; i++)
                 {
                     asteroid = new Asteroid(Content.Load<Texture2D>("asteroid_sprite1"));
-                    System.Console.Write(asteroid.asteroid_x);
-                    System.Console.Write("\n");
+                    //System.Console.Write(asteroid.asteroid_x);
+                    //System.Console.Write("\n");
                     player_ship.asteroid_list.Add(asteroid);
                 }
                 start = false;
-                System.Console.Write("Asteroid Count: ");
-                System.Console.Write(player_ship.asteroid_list.Count);
-                System.Console.Write("\n");
+                //System.Console.Write("Asteroid Count: ");
+                //System.Console.Write(player_ship.asteroid_list.Count);
+                //System.Console.Write("\n");
             }
 
 
@@ -167,7 +169,25 @@ namespace Spaceship_shooter
             // update asteroid's position
             for (int i = 0; i < player_ship.asteroid_list.Count; i++)
             {
+                //for (int j = 0; j < player_ship.missile_list.Count; j++)
+
+                    
+               // {
+
+                    //if (player_ship.asteroid_list[i].asteroid_x  < player_ship.missile_list[j].missile_x && player_ship.asteroid_list[i].asteroid_x > player_ship.missile_list[j].missile_x)
+                    //{
+                        //player_ship.asteroid_list.RemoveAt(i);
+                        //player_ship.missile_list.RemoveAt(j);
+                    //}
+                    //if (player_ship.asteroid_list[i].asteroid_y < player_ship.missile_list[j].missile_y && player_ship.asteroid_list[i].asteroid_y > player_ship.missile_list[j].missile_y)
+                    //{
+                        //player_ship.asteroid_list.RemoveAt(i);
+                        //player_ship.missile_list.RemoveAt(j);
+                    //}
                 player_ship.asteroid_list[i].Update();
+                //player_ship.missile_list[j].Update();
+                //}
+                
             }
 
 
